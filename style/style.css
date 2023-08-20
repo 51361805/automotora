@@ -1,0 +1,667 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: linear-gradient(to right, #3b0404, #000000);
+    /* Color oscuro de fondo */
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    /* Hace la letra más ancha */
+}
+
+
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: #ffffff;
+    /* Color del texto */
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff0000;
+    /* Rojo para la línea */
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff0000;
+    /* Cambio de color al pasar el mouse */
+}
+
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 8px;
+    border: 2px solid #ff0000;
+    /* Borde rojo */
+    border-radius: 5px;
+}
+
+/* Estilos para los enlaces de marcas */
+.brand-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.brand-links a {
+    color: #000000;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.brand-links a:hover {
+    color: #ff0000;
+    /* Cambio de color al pasar el mouse */
+}
+
+
+
+
+.carousel-item img {
+    width: 600px;
+}
+
+
+
+.custom-heading {
+    font-family: "Arial", sans-serif;
+    font-size: 24px;
+    color: #FF5733;
+    /* Cambia el color a tu elección */
+    font-weight: bold;
+}
+
+.custom-subheading {
+    font-family: "Tahoma", sans-serif;
+    font-size: 18px;
+
+    /* Cambia el color a tu elección */
+}
+
+aside {
+    background: linear-gradient(to bottom, #000000, #8c0000);
+    width: 200px !important;
+
+
+}
+
+.col-md-3 {
+    height: 100vh;
+
+    width: 40%;
+}
+
+.container {
+    max-width: 2000px;
+
+}
+
+.centro {
+    display: flex;
+}
+
+.filtar {
+    width: 100%;
+    padding: 10px 10px;
+    margin-top: 10px;
+    background: linear-gradient(to bottom, #000000, #8c0000);
+}
+
+.carruselflex {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #000000, #8c0000);
+    justify-content: space-around;
+
+}
+
+.title {
+    color: red;
+}
+
+.spnTitle {
+    color: #252222;
+}
+
+.carruselpositio {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.accordion-flush .accordion-item .accordion-button,
+.accordion-flush .accordion-item .accordion-button.collapsed {
+    border-radius: 0;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.imgcardd {
+    max-width: 390px;
+}
+
+.cardd {
+    box-shadow: 3px 3px 5px 5px #e9dfdf;
+    max-width: 400px;
+}
+
+.titleproducto {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.vehicle-details,
+.precio {
+    margin: 5px;
+}
+
+.vehicle-details {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.visualizar {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 10px;
+    border: 2px solid #2f6afe;
+    padding: 15px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.centbutton {
+    display: flex;
+}
+
+.visualizar:hover {
+    background-color: #2f6afe;
+    color: white;
+}
+
+.vis5 {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.marginleft {
+    margin-left: 5px;
+}
+
+.trn {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.green-text {
+    color: green;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.cardd {
+    margin: 20px;
+}
+
+.accordion-collapse {
+    background-color: #dadee9;
+}
+
+.fondo {
+    background-color: #2d2d2d;
+
+}
+
+.col-md-9 {
+    width: 100%;
+}
+
+
+
+.animated-title {
+    color: #e9dfdf;
+}
+
+
+.logonav {
+    height: 50px;
+}
+
+.nav-link {
+    color: rgb(47, 44, 44) !important;
+}
+
+.row {
+    flex-wrap: nowrap;
+}
+
+.col-md-9 {
+    padding: 0;
+}
+
+.accordion {
+    background-color: transparent;
+}
+
+
+
+/* Estilos para el acordeón */
+.accordion-item {
+    background-color: #f4f4f4;
+    /* Color de fondo del acordeón */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    /* Borde del acordeón */
+    border-radius: 5px;
+    /* Bordes redondeados */
+}
+
+.accordion-button {
+    background-color: #ddd;
+    /* Color del botón del acordeón */
+    color: #333;
+    /* Color del texto del botón del acordeón */
+}
+
+.accordion-button:hover {
+    background-color: #ccc;
+    /* Color del botón del acordeón al pasar el mouse */
+}
+
+.accordion-button.collapsed {
+    background-color: #bbb;
+    /* Color del botón del acordeón cuando está colapsado */
+}
+
+.accordion-collapse {
+    background-color: #fff;
+    /* Color del contenido del acordeón */
+    border-top: 1px solid #ddd;
+    /* Borde superior del contenido del acordeón */
+    padding: 10px;
+    /* Espaciado interno del contenido del acordeón */
+}
+
+label {
+    font-size: 12px;
+}
+
+.automotora-icon {
+    height: 50px;
+}
+
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    /* Cambia la fuente a la que desees */
+    color: #8c0000;
+    /* Cambia el color de la letra */
+    display: inline-block;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(129, 120, 120);
+    /* Cambia el color del subrayado */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    /* Cambia la fuente a la que desees */
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(to right, #3b0000, #9c0000);
+    /* Cambia los colores del degradado */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.custom-heading {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    /* Cambia la fuente a la que desees */
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(to right, #3b0000, #9c0000);
+    /* Cambia los colores del degradado */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.imgaside {
+    height: 26px;
+}
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(to bottom, #000000, #8c0000);
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 3);
+}
+
+.accordion-body {
+    padding: 0;
+}
+
+
+/* Estilos para el footer */
+.footer {
+    background: linear-gradient(to bottom, #000000, #8c0000);
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 80px;
+    height: auto;
+}
+
+.footer-icons {
+    margin: 20px 0;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.datacar {
+    width: 30%;
+}
+
+.carminiatura {
+    width: 200px;
+    border: solid 1px black;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px  #b4a9a9;
+
+}
+
+.imgminiaturabloq {
+    display: flex;
+    justify-content: center;
+
+}
+
+.imggrande {
+    display: flex;
+    justify-content: center;
+
+}
+
+.columainfop {
+    display: flex;
+    flex-direction: column;
+    max-height: 250px;
+    overflow-y: scroll;
+    width: 300px;
+    font-size: 12px;
+
+    /* Barra de desplazamiento personalizada para navegadores WebKit (Chrome, Safari) */
+   
+}
+
+::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 3px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color de fondo de la pista de la barra de desplazamiento */
+}
+/* Barra de desplazamiento personalizada para navegadores Firefox */
+.columainfop::-moz-scrollbar {
+    width: 6px;
+}
+
+.columainfop::-moz-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+}
+
+.columainfop::-moz-scrollbar-track {
+    background-color: #f1f1f1;
+}
+.picgrande{
+    max-width: 600px;
+}
+.bloquevendido{
+ 
+    box-shadow: 5px 3px 3px 3px  #b4a9a9;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+/* Estilos para el título de la sección */
+.titulo-seccion {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Estilos y animación para la línea debajo del título */
+.titulo-seccion::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #8c0000; /* Color de la línea */
+    bottom: -8px; /* Ajusta la posición de la línea */
+    left: 0;
+    transform: scaleX(0); /* Comienza con la línea oculta */
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.titulo-seccion:hover::after {
+    transform: scaleX(1); /* Muestra la línea al hacer hover */
+}
+
+.topnax{
+    margin-top: 20px;
+}
+
+.columainfop ,.div{
+    padding: 5px;
+}
+
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 ;
+    margin-right: 20px;
+}
+.infocar{
+    margin-left: 20px;
+}
+.contactarbtn{
+    width: 100%;
+    background: linear-gradient(to bottom, #000000, #8c0000);
+}
+
+.contactarbtn:hover{
+    background: linear-gradient(to bottom, #8c0000, #000000);
+}
+.mb-3 {
+    margin-bottom: 0 !important;
+}
+.picgrande{
+    margin: 5px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+.carminiatura{
+ height: 70px;
+width: 150px;
+padding: 0;
+border-radius: 2px;
+}
+.mqwer{
+    width: 100%;margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
+.imggrande{
+    flex-wrap: wrap;
+}
+
+.icon{
+    color: #5b5858;
+}
+
+@media screen and (max-width: 1050px) {
+    aside{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 970px) {
+    .carruselflex {
+       display: block;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .brand-links{
+        max-width: 100%;
+        overflow-x: scroll;
+        display: flex;
+        justify-content: start;
+    }
+
+
+
+    .brand-links::-webkit-scrollbar {
+        /* Oculta la barra de desplazamiento en navegadores basados en WebKit (Chrome, Safari) */
+        display: none;
+    }
+    .productos{
+        display: block;
+    }
+
+    .imgcardd {
+        max-width: 345px;
+    }
+
+    .picgrande {
+       
+        width: 353px;
+       
+    }
+
+
+
+
+    .infocar {
+       margin-left: 0;
+    }
+
+    .columainfop{
+        height: 100px;
+    }
+
+
+    .imgminiaturabloq {
+        overflow-x: scroll; /* Permite el desplazamiento horizontal */
+        scrollbar-width: none; /* Oculta la barra de desplazamiento en navegadores que lo soportan */
+        display: flex;
+        justify-content: start;
+        width: 100%;
+    }
+    
+    .imgminiaturabloq::-webkit-scrollbar {
+        /* Oculta la barra de desplazamiento en navegadores basados en WebKit (Chrome, Safari) */
+        display: none;
+    }
+
+    .contact-form {
+        margin: 0;
+    }
+}
