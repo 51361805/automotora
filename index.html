@@ -35,7 +35,7 @@
                         <a class="nav-link" href="./pages/vendidos.html"><i class="fas fa-briefcase"></i> Vendidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fab fa-whatsapp"></i> Contacto</a>
+                        <a class="nav-link" href="https://api.whatsapp.com/send?phone=59892878389"><i class="fab fa-whatsapp"></i> Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -54,10 +54,11 @@
         <div class="row">
 
 
-            <aside >
+            <aside>
                 <!-- Contenido del aside -->
                 <div class="filter-sidebar">
-                    <h2 class="custom-heading">Filt <samp><img class="imgaside" src="./img/r.png" alt=""></samp> ar Búsquedas</h2>
+                    <h2 class="custom-heading">Filt <samp><img class="imgaside" src="./img/r.png" alt=""></samp> ar
+                        Búsquedas</h2>
                     <form id="filter-form ">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item">
@@ -375,10 +376,9 @@
                         </div>
 
 
-                        <div class="buscadorcontenedor ">
-
+                        <div class="buscadorcontenedor">
                             <div class="search-bar">
-                                <input class="search-input" type="text" placeholder="Buscar...">
+                                <input class="search-input" type="text" placeholder="Buscar..." oninput="filtrarAutos()">
                             </div>
                             <div class="brand-links">
                                 <a href="#">Volkswagen</a>
@@ -392,6 +392,28 @@
                         </div>
 
 
+
+
+
+                        <div id="contador" class="cterg">
+                            <div class="contador-item">
+                                <h2 class="enfoque contador-numero">0%</h2>
+                                <p class="contador-texto">Atención Personalizada</p>
+                            </div>
+                            <div class="contador-item">
+                                <h2 class="enfoque contador-numero">0%</h2>
+                                <p class="contador-texto">Clientes Satisfechos</p>
+                            </div>
+                            <div class="contador-item">
+                                <h2 class="enfoque contador-numero">0</h2>
+                                <p class="contador-texto">Negocios Realizados</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div id="autosContenedor" class="productos">
+                            <!-- Aquí se mostrarán los resultados filtrados -->
+                        </div>
                         <section id="autoscontenedor" class="productos">
 
                         </section>
@@ -447,7 +469,6 @@
             </div>
         </div>
     </footer>
-
 
 
 

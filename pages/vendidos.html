@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Personalizado</title>
+    <title>Vendidos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Enlace a Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="../index.html">
                 <img class="logonav" src="../img/r.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -35,7 +35,7 @@
                         <a class="nav-link" href="vendidos.html"><i class="fas fa-briefcase"></i> Vendidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fab fa-whatsapp"></i> Contacto</a>
+                        <a class="nav-link" href="https://api.whatsapp.com/send?phone=59892878389"><i class="fab fa-whatsapp"></i> Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -167,132 +167,37 @@
                         </div>
 
 
+                        <div id="otro-contador" class="cterg">
+                            <div class="contador-item">
+                                <h2 class="enfoque contador-numero">0</h2>
+                                <p class="contador-texto">Proyectos Completados</p>
+                            </div>
+                            <div class="contador-item">
+                                <h2 class="enfoque contador-numero">0%</h2>
+                                <p class="contador-texto">Satisfacción del Cliente</p>
+                            </div>
+                            <div class="contador-item">
+                                <h2 class="enfoque contador-numero">0</h2>
+                                <p class="contador-texto">Horas de Trabajo</p>
+                            </div>
+                        </div>
+                        
+
+
+                
+
                         <h2 class="titulo-seccion">Autos Vendidos</h2>
 
 
 
-
-                        <section class="bloquevendido">
-
-                            <div class="imggrande">
-
-
-
-                                <picture id="imagen-grande">
-                                    <img class="picgrande" id="imagenGrande" src="../img/porche.jpeg" alt="">
-                                    <h2 class="titulo-seccion" id="tituloImagenGrande">Nissan GTR FULL</h2>
-                                </picture>
-
-
-
-                                <div class="infocar">
-
-
-
-                                    <div class="infocar"> <!-- Agregado el div con clase "infocar" -->
-                                        <img class="imgcardd" src="./img/gtr4.jpg" alt="">
-                                        <h4 class="titleproducto">Nisan gtr</h4>
-                                        <p class="precio green-text">USD ${auto.precioContado}</p>
-
-                                        <div class="trn columainfop">
-                                            <div class="topnax">
-                                                <i class="fas fa-road icon"></i> Kilómetros: 100 km<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-map-marker-alt icon"></i> Ubicación: Maldonado<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-car icon"></i> 5 Puertas<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-calendar-alt icon"></i> Año: 2023<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-gas-pump icon"></i> Combustible: Nafta<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-cogs icon"></i> Transmisión: Automática<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-tint icon"></i> Color: Rojo<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-couch icon"></i> Tapicería: Cuero<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-certificate icon"></i> Estado: Excelente<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-camera-retro icon"></i> Cámara trasera<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-sun icon"></i> Techo solar<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-snowflake icon"></i> Suspensión: Deportiva<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-chair icon"></i> Asientos calefactables<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-car-alt icon"></i> Dirección: Hidráulica<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-map icon"></i> Sistema de navegación<br>
-                                            </div>
-                                            <div>
-                                                <i class="fab fa-bluetooth icon"></i> Bluetooth<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-key icon"></i> Inicio remoto<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-bell icon"></i> Alarma<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-shield-alt icon"></i> ABS<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-airbag icon"></i> Airbags<br>
-                                            </div>
-                                            <div>
-                                                <i class="fas fa-snowplow icon"></i> Control de tracción<br>
-                                            </div>
-
-
-                                        </div>
-
-
-                                    </div>
+                        <div id="autosInactivos" class="">
 
 
 
 
+                        </div>
 
-
-                                </div>
-
-                            </div>
-                            <!-- Muestra de imágenes debajo del carrusel -->
-                            <div class="row mt-4 imgminiaturabloq">
-                                <div class="col-md-4 carminiatura">
-                                    <img src="../img/gtr1.jpg" id="miniatura1" alt="Imagen 1" class="img-fluid mqwer"
-                                        onclick="changeCarouselImage('gtr1.jpg')">
-                                </div>
-                                <div class="col-md-4 carminiatura">
-                                    <img src="../img/gtr2.jpg" id="miniatura2" alt="Imagen 2" class="img-fluid mqwer"
-                                        onclick="changeCarouselImage('gtr2.jpg')">
-                                </div>
-                                <div class="col-md-4 carminiatura">
-                                    <img src="../img/nisan3.png" id="miniatura3" alt="Imagen 3" class="img-fluid mqwer"
-                                        onclick="changeCarouselImage('nisan3.png')">
-                                </div>
-                                <!-- Agrega más columnas según el número de imágenes -->
-                            </div>
-
-                        </section>
-
-
+                     
 
 
 
@@ -346,7 +251,9 @@
     <!-- Enlace a Bootstrap JS y Popper.js (necesarios para el funcionamiento del navbar en móviles) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
     <script src="../js/main.js"></script>
+    <script src="../js/vendido.js"></script>
 </body>
 
 </html>

@@ -27,6 +27,15 @@ const autos = [
     id: "auto1",
     modelo: "Mitshubishi Mirage G 2023",
     precioContado: 18725,
+    estado: false,
+    img1: "",
+    img2: "",
+    img3: "",
+    img4: "",
+    img5: "",
+    img6: "",
+    img7: "",
+    img8: "",
     kilometros: 50000,
     combustible: "Nafta",
     puertas: 4,
@@ -48,12 +57,22 @@ const autos = [
       abs: true,
       airbags: true,
       controlTraccion: true,
+      navegacion:true
     },
   },
   {
     id: "auto2",
     modelo: "Toyota Corolla 2023",
     precioContado: 21500,
+    estado: false,
+    img1: "",
+    img2: "",
+    img3: "",
+    img4: "",
+    img5: "",
+    img6: "",
+    img7: "",
+    img8: "",
     kilometros: 35000,
     combustible: "Nafta",
     puertas: 4,
@@ -64,23 +83,33 @@ const autos = [
     motor: "Inline-4",
     funciones: {
       camara: true,
-      techoSolar: true,
+      techoSolar: false,
       suspensiones: false,
-      asientosCalefactables: true,
-      direccionHidraulica: false,
-      bluetooth: true,
+      asientosCalefactables: false,
+      direccionHidraulica: true,
+      bluetooth: false,
       inicioRemoto: true,
       alarma: true,
       sensorEstacionamiento: true,
       abs: true,
       airbags: true,
       controlTraccion: true,
+      navegacion:false
     },
   },
   {
     id: "auto3",
     modelo: "Ford Mustang GT",
     precioContado: 35000,
+    estado: true,
+    img1: "",
+    img2: "",
+    img3: "",
+    img4: "",
+    img5: "",
+    img6: "",
+    img7: "",
+    img8: "",
     kilometros: 28000,
     combustible: "Gasolina",
     puertas: 2,
@@ -102,7 +131,83 @@ const autos = [
       abs: true,
       airbags: true,
       controlTraccion: true,
+      navegacion:true
     },
+  },
+  {
+    id: "auto8",
+    modelo: "BMW X5",
+    precioContado: 45000,
+    estado: true,
+    img1: "",
+    img2: "",
+    img3: "",
+    img4: "",
+    img5: "",
+    img6: "",
+    img7: "",
+    img8: "",
+    kilometros: 25000,
+    combustible: "Gasolina",
+    puertas: 4,
+    anio: 2020,
+    traccion: "AWD",
+    financiacion: 36,
+    importeCuota: 500,
+    motor: "V6",
+    funciones: {
+      camara: true,
+      techoSolar: true,
+      suspensiones: true,
+      asientosCalefactables: true,
+      direccionHidraulica: false,
+      bluetooth: true,
+      inicioRemoto: false,
+      alarma: true,
+      sensorEstacionamiento: true,
+      abs: true,
+      airbags: true,
+      controlTraccion: true,
+      navegacion: true
+    }
+  },
+  // Agrega aquí los otros cuatro objetos adicionales
+  {
+    id: "auto9",
+    modelo: "Audi Q5",
+    precioContado: 38000,
+    estado: true,
+    img1: "",
+    img2: "",
+    img3: "",
+    img4: "",
+    img5: "",
+    img6: "",
+    img7: "",
+    img8: "",
+    kilometros: 22000,
+    combustible: "Gasolina",
+    puertas: 4,
+    anio: 2018,
+    traccion: "AWD",
+    financiacion: 24,
+    importeCuota: 420,
+    motor: "V6",
+    funciones: {
+      camara: true,
+      techoSolar: true,
+      suspensiones: false,
+      asientosCalefactables: true,
+      direccionHidraulica: false,
+      bluetooth: true,
+      inicioRemoto: true,
+      alarma: true,
+      sensorEstacionamiento: true,
+      abs: true,
+      airbags: true,
+      controlTraccion: true,
+      navegacion: true
+    }
   },
   // ... Agregar más autos aquí
 ];
@@ -110,24 +215,24 @@ const autos = [
 
 
 
-
-
+//autos activos
 function cargarAutos() {
   const autoscontenedor = document.getElementById('autoscontenedor');
 
   autos.forEach(auto => {
-    const contenedor = document.createElement('div');
-    contenedor.classList.add('cardd'); // Agrega la clase "cardd" al contenedor
+    if (auto.estado) { // Verificar el estado
+      const contenedor = document.createElement('div');
+      contenedor.classList.add('cardd'); // Agregar la clase "cardd" al contenedor
 
-    contenedor.innerHTML = `
+      contenedor.innerHTML = `
     <img class="imgcardd" src="./img/gtr4.jpg" alt="">
     <h4 class="titleproducto">${auto.modelo}</h4>
     <p class="precio green-text">USD ${auto.precioContado}</p>
 
     <div class="trn">
         <div> 
-            <i class="fas fa-road icon"></i> Kilómetros: ${auto.kilometros} km<br>
-            <i class="fas fa-map-marker-alt icon"></i> Ubicación: Maldonado<br>
+            <i class="fas fa-road icon"></i> Km: ${auto.kilometros} km<br>
+            <i class="fas fa-map-marker-alt icon"></i> Maldonado<br>
             <i class="fas fa-car icon"></i> ${auto.puertas} Puertas<br>
         </div>
 
@@ -158,37 +263,139 @@ function cargarAutos() {
                 </div>
             </div>
         </div>
-    </div>
-    <div class="centbutton">
+       </div>
+       <div class="centbutton">
         <button id="${auto.id} " class="visualizar">Visualizar</button>
-    </div>
-     `;
+       </div>
+        `;
 
+
+    // Decidir en qué contenedor agregar el contenedor clonado
+ 
     autoscontenedor.appendChild(contenedor);
-
-   
+    }
+    
   });
-  
 }
-
-
-
-
-
-
-
-
-
-
 cargarAutos();
 
 
 
 
-function changeCarouselImage(imageSrc ) {
-  // Cambiar la imagen grande
-  const imagenGrande = document.getElementById('imagenGrande');
-  imagenGrande.src = '../img/' + imageSrc;
 
 
-} 
+
+
+const contadorElementos = document.querySelectorAll('.contador-item');
+const valoresFinales = [100, 100, 400];
+const mensajes = [
+  'Atención Personalizada',
+  'Clientes Satisfechos',
+  'Negocios Realizados'
+];
+
+let contador = 0;
+let valor = 0; // Valor actual del contador
+
+function cambiarValor() {
+  if (contador < contadorElementos.length) {
+    const enfoqueElement = contadorElementos[contador].querySelector('.enfoque');
+    const pElement = contadorElementos[contador].querySelector('p');
+
+    if (contador === 2) {
+      enfoqueElement.textContent = valor;
+    } else {
+      enfoqueElement.textContent = `${valor}%`;
+    }
+    
+    pElement.textContent = mensajes[contador];
+
+    contadorElementos[contador].classList.add('mostrar'); // Agregar clase para mostrar con animación
+
+    valor++; // Incrementar el valor
+    if (valor > valoresFinales[contador]) {
+      contador++;
+      valor = 0;
+    }
+  } else {
+    clearInterval(intervalo);
+  }
+}
+
+const duracionTotal = 10000; // 10 segundos en milisegundos
+const intervalo = setInterval(cambiarValor, duracionTotal / (valoresFinales[0] + valoresFinales[1] + valoresFinales[2]));
+
+
+
+
+
+
+
+
+
+
+function filtrarAutos() {
+  const filtro = document.querySelector('.search-input').value.toLowerCase();
+  const autosContenedor = document.getElementById('autosContenedor');
+
+  if (filtro === '') {
+    // Si el filtro está vacío, vaciar el contenido del contenedor
+    autosContenedor.innerHTML = '';
+    return; // No es necesario seguir procesando si el filtro está vacío
+  }
+
+  autosContenedor.innerHTML = '';
+
+  autos.forEach(auto => {
+    if (auto.modelo.toLowerCase().includes(filtro) && auto.estado) {
+      const autoElement = document.createElement('div');
+          
+      autoElement.classList.add('cardd');
+      autoElement.innerHTML = `
+      <img class="imgcardd" src="./img/gtr4.jpg" alt="">
+      <h4 class="titleproducto">${auto.modelo}</h4>
+      <p class="precio green-text">USD ${auto.precioContado}</p>
+  
+      <div class="trn">
+          <div> 
+              <i class="fas fa-road icon"></i> Km: ${auto.kilometros} km<br>
+              <i class="fas fa-map-marker-alt icon"></i> Maldonado<br>
+              <i class="fas fa-car icon"></i> ${auto.puertas} Puertas<br>
+          </div>
+  
+          <div>
+              <i class="fas fa-calendar-alt icon"></i> Año: ${auto.anio}<br>
+              <i class="fas fa-gas-pump icon"></i> Combustible: ${auto.combustible}<br>
+          </div>
+  
+      </div>
+  
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapse${auto.id}"
+                  aria-expanded="false" aria-controls="flush-collapse${auto.id}">
+                  <i class="fas fa-info-circle icon vis5"
+                      style="color: rgb(42, 42, 214);"></i>
+                  <p> Ver Información</p>
+              </button>
+          </h2>
+          <div id="flush-collapse${auto.id}" class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <div class="financiacion marginleft">
+                      <p><i class="fas fa-credit-card"></i> Financiación disponible:</p>
+                      <p>Hasta en ${auto.financiacion} cuotas de <span class="currency">USD</span> ${auto.importeCuota}</p>
+                      <p>¡La primera cuota dentro de los 60 días!</p>
+                  </div>
+              </div>
+          </div>
+         </div>
+         <div class="centbutton">
+          <button id="${auto.id} " class="visualizar">Visualizar</button>
+         </div>
+      `;
+      autosContenedor.appendChild(autoElement);
+    }
+  });
+}

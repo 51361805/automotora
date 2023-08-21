@@ -220,6 +220,7 @@ aside {
     display: flex;
     justify-content: space-around;
     margin-bottom: 5px;
+    margin-left: 5px;
 }
 
 .green-text {
@@ -404,6 +405,7 @@ label {
     background: linear-gradient(to bottom, #000000, #8c0000);
     color: #fff;
     padding: 40px 0;
+ 
 }
 
 .footer-logo {
@@ -447,7 +449,7 @@ label {
     border: solid 1px black;
     margin: 10px;
     border-radius: 5px;
-    box-shadow: 3px 3px 3px 3px  #b4a9a9;
+    box-shadow: 0 0  5px  #b4a9a9;
 
 }
 
@@ -505,7 +507,7 @@ label {
 }
 .bloquevendido{
  
-    box-shadow: 5px 3px 3px 3px  #b4a9a9;
+    box-shadow: 0 0  5px  #b4a9a9;
     margin-bottom: 30px;
     margin-left: 10px;
     margin-right: 10px;
@@ -556,12 +558,22 @@ label {
 }
 .infocar{
     margin-left: 20px;
+    background-color: #f1f1f1;
 }
 .contactarbtn{
     width: 100%;
     background: linear-gradient(to bottom, #000000, #8c0000);
 }
 
+
+.contador-item {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease-in-out;
+}
 .contactarbtn:hover{
     background: linear-gradient(to bottom, #8c0000, #000000);
 }
@@ -587,11 +599,15 @@ border-radius: 2px;
 }
 .imggrande{
     flex-wrap: wrap;
+    padding-top: 30px;
 }
 
 .icon{
     color: #5b5858;
 }
+
+
+
 
 @media screen and (max-width: 1050px) {
     aside{
@@ -606,6 +622,14 @@ border-radius: 2px;
     }
 }
 
+@media screen and (max-width: 1300px) {
+    .imggrande {
+
+        margin-left: 0;
+        padding-top: 20px;
+
+    }
+}
 
 
 @media screen and (max-width: 480px) {
@@ -641,6 +665,7 @@ border-radius: 2px;
 
     .infocar {
        margin-left: 0;
+       background-color: transparent;
     }
 
     .columainfop{
@@ -649,11 +674,13 @@ border-radius: 2px;
 
 
     .imgminiaturabloq {
-        overflow-x: scroll; /* Permite el desplazamiento horizontal */
-        scrollbar-width: none; /* Oculta la barra de desplazamiento en navegadores que lo soportan */
+        overflow-x: scroll;
+        scrollbar-width: none;
         display: flex;
         justify-content: start;
-        width: 100%;
+        width: 97% !important;
+        margin: 5px;
+        margin-right: 5px;
     }
     
     .imgminiaturabloq::-webkit-scrollbar {
@@ -664,4 +691,95 @@ border-radius: 2px;
     .contact-form {
         margin: 0;
     }
+
+    .columainfop {
+   
+        font-size: 15px;
+    }
+
+    .trabtn{
+        background-color: transparent !important;
+        border: none;
+        margin-top: 30px;
+    }
+    
+    .title-container{
+        text-align: center;
+    }
+    .contador-item {
+        padding: 0;
+        margin: 5px;
+    }
+
 }
+
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: gray !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.contacbtnven{
+max-width: 400px !important;
+background-color: #f1f1f1 !important;
+
+
+}
+
+
+.btnain{
+    display: flex;align-items: baseline;
+}
+
+.vendidop{font-size: 20px;
+ 
+    margin: 0;
+    padding: 0;
+color:#9c0000}
+
+
+.contador-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+
+.cterg{
+    display: flex;
+    justify-content: center;
+}
+#contador ,#otro-contador {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.contador-item.mostrar {
+    background-color: #f9f9f9;
+}
+
+
+.enfoque {
+    font-size: 24px;
+    color: #8c0000;
+    margin-bottom: 5px;
+}
+
+.contador-texto {
+    font-size: 14px;
+    color: #333333;
+}
+
+
+
+
+
+
