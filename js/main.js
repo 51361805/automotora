@@ -312,7 +312,7 @@ function cargarAutos() {
         const vehiculosGuardados = JSON.parse(localStorage.getItem('vehiculosGuardados')) || [];
         vehiculosGuardados.push(auto);
         localStorage.setItem('vehiculosGuardados', JSON.stringify(vehiculosGuardados));
-        window.location.href = '/pages/vistos.html'; 
+        window.location.href = './pages/vistos.html'; 
       });
 
       autoscontenedor.appendChild(contenedor);
