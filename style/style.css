@@ -691,14 +691,6 @@ label {
 
 
 
-    .infocar {
-        margin-left: 0;
-        background-color: transparent;
-    }
-
-    .columainfop {
-        height: 100px;
-    }
 
 
     .imgminiaturabloq {
@@ -746,6 +738,18 @@ label {
     .imggrande {
 
         flex-wrap: wrap;
+
+    }
+    
+    .infocar {
+        margin-left: 0;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .columainfop {
+        height: 250px;
+        width: 95%;
 
     }
 }
