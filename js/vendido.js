@@ -8,92 +8,120 @@ function autosvendidos() {
             // Agrega la clase "cardd" al contenedor
 
             contenedorvendido.innerHTML = ` 
+           
+          
             <section class="bloquevendido">
-                <div class="imggrande">
 
 
-                    <div class="accordion-item trabtn">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed contacbtnven" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#flush-collapse${vendido.id}"
-                                aria-expanded="false" aria-controls="flush-collapse${vendido.id}">
-                                <div class="btnain">
-                                    <i class="fas fa-info-circle icon vis5"
-                                        style="color: rgb(42, 42, 214);"></i> Solicitar Información
-                                </div>
-                                <!-- Cambia el texto aquí -->
-                            </button>
+            <h4 class="titleproducto ertr">Vehículo vendido</h4>
+            <div class="imggrande">
 
-                        </h2>
-                        <div id="flush-collapse${vendido.id}" class="accordion-collapse collapse"
-                            data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <form class="contact-form" action="#" method="POST">
 
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Tu nombre</label>
-                                        <input type="text" class="form-control" id="name" name="name" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="phone" class="form-label">Teléfono</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="comment" class="form-label">Comentario</label>
-                                        <textarea class="form-control"
-                                            placeholder="Solicitar información sobre este vehículo" id="comment"
-                                            name="comment" rows="2" required></textarea>
-                                    </div>
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="receiveAds"
-                                            name="receiveAds">
-                                        <label class="form-check-label" for="receiveAds">Recibe
-                                            anuncios similares en tu
-                                            email</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary contactarbtn">Enviar</button>
-                                </form>
+                <div class="accordion-item trabtn">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed contacbtnven" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#flush-collapse${vendido.id}"
+                            aria-expanded="false" aria-controls="flush-collapse${vendido.id}">
+                            <div class="btnain">
+                                <i class="fas fa-info-circle icon vis5"
+                                    style="color: rgb(42, 42, 214);"></i> Solicitar Información
                             </div>
+                            <!-- Cambia el texto aquí -->
+                        </button>
+
+                    </h2>
+                    <div id="flush-collapse${vendido.id}" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <form class="contact-form" action="#" method="POST">
+
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Tu nombre</label>
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="comment" class="form-label">Comentario</label>
+                                    <textarea class="form-control"
+                                        placeholder="Solicitar información sobre este vehículo"
+                                        id="comment" name="comment" rows="2" required></textarea>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="receiveAds"
+                                        name="receiveAds">
+                                    <label class="form-check-label" for="receiveAds">Recibe
+                                        anuncios similares en tu
+                                        email</label>
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-primary contactarbtn">Enviar</button>
+                            </form>
                         </div>
-                     </div>
+                    </div>
+                </div>
+
+
+                <div id="carouselExample${vendido.id}" class="carousel slide sadsa">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="../img/gtr1.jpg" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="../img/gtr3.jpg" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="../img/porche.jpeg" alt="Imagen 3">
+                        </div>
+                        <!-- Agrega más imágenes según las propiedades de img4, img5, etc. -->
+                    </div>
+                    <button class="carousel-control-prev" type="button"
+                        data-bs-target="#carouselExample${vendido.id}" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button"
+                        data-bs-target="#carouselExample${vendido.id}" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
 
 
 
-                     <picture id="imagen-grande">
-                        <img class="picgrande" id="imagenGrande" src="../img/porche.jpeg" alt="">
-                        <h2 class="titulo-seccion" id="tituloImagenGrande">${vendido.modelo}</p>
-                        <p class="vendidop" >Vendido</h2>
-                     </picture>
 
 
 
-                  
 
+                <div class="infocar"> <!-- Agregado el div con clase "infocar" -->
+                    <img class="imgcardd" src="./img/gtr4.jpg" alt="">
+                    <h4 class="titleproducto">${vendido.modelo}</h4>
+                    <p class="precio green-text">USD ${vendido.precioContado}</p>
 
-
-                        <div class="infocar"> <!-- Agregado el div con clase "infocar" -->
-                            <img class="imgcardd" src="./img/gtr4.jpg" alt="">
-                            <h4 class="titleproducto">${vendido.modelo}</h4>
-                            <p class="precio green-text">USD ${vendido.precioContado}</p>
-
-                            <div class="trn columainfop">
-                            <div class="topnax">
+                    <div class="trn columainfop">
+                        <div class="topnax">
                             <i class="fas fa-road icon" style="color: #8e8e8e;"></i> Kilómetros:
                             ${vendido.kilometros} km<br>
                         </div>
                         <div>
-                            <i class="fas fa-map-marker-alt icon" style="color: #8e8e8e;"></i> Ubicación:
+                            <i class="fas fa-map-marker-alt icon" style="color: #8e8e8e;"></i>
+                            Ubicación:
                             Maldonado<br>
                         </div>
                         <div>
-                            <i class="fas fa-car icon" style="color: #8e8e8e;"></i> ${vendido.puertas} Puertas<br>
+                            <i class="fas fa-car icon" style="color: #8e8e8e;"></i>
+                            ${vendido.puertas} Puertas<br>
                         </div>
                         <div>
                             <i class="fas fa-calendar-alt icon" style="color: #8e8e8e;"></i> Año:
                             ${vendido.anio}<br>
                         </div>
                         <div>
-                            <i class="fas fa-gas-pump icon" style="color: #8e8e8e;"></i> Combustible:
+                            <i class="fas fa-gas-pump icon" style="color: #8e8e8e;"></i>
+                            Combustible:
                             ${vendido.combustible}<br>
                         </div>
                         <div>
@@ -104,9 +132,10 @@ function autosvendidos() {
                             <i class="fas fa-tint icon" style="color: #8e8e8e;"></i> Color: <br>
                         </div>
                         <div>
-                            <i class="fas fa-couch icon" style="color: #8e8e8e;"></i> Tapicería: Cuero<br>
+                            <i class="fas fa-couch icon" style="color: #8e8e8e;"></i> Tapicería:
+                            Cuero<br>
                         </div>
-                       
+
                         <div>
                             <i class="fas fa-camera-retro icon" style="color: #8e8e8e;"></i> Cámara
                             trasera: ${vendido.funciones.camara ? "Sí" : "No"}<br>
@@ -116,19 +145,23 @@ function autosvendidos() {
                             ${vendido.funciones.techoSola ? "Sí" : "No"}<br>
                         </div>
                         <div>
-                            <i class="fas fa-snowflake icon" style="color: #8e8e8e;"></i> Suspensión Deportiva:
+                            <i class="fas fa-snowflake icon" style="color: #8e8e8e;"></i> Suspensión
+                            Deportiva:
                             ${vendido.funciones.suspensiones ? "Sí" : "No"}<br>
                         </div>
                         <div>
-                            <i class="fas fa-chair icon" style="color: #8e8e8e;"></i> Asientos calefactables:
+                            <i class="fas fa-chair icon" style="color: #8e8e8e;"></i> Asientos
+                            calefactables:
                             ${vendido.funciones.asientosCalefactables ? "Sí" : "No"}<br>
                         </div>
                         <div>
-                            <i class="fas fa-car-alt icon" style="color: #8e8e8e;"></i> Dirección Hidráulica:
+                            <i class="fas fa-car-alt icon" style="color: #8e8e8e;"></i> Dirección
+                            Hidráulica:
                             ${vendido.funciones.direccionHidraulica ? "Sí" : "No"}<br>
                         </div>
                         <div>
-                            <i class="fas fa-map icon" style="color: #8e8e8e;"></i> Sistema de navegación: ${vendido.funciones.navegacion ? "Sí" : "No"}<br>
+                            <i class="fas fa-map icon" style="color: #8e8e8e;"></i> Sistema de
+                            navegación: ${vendido.funciones.navegacion ? "Sí" : "No"}<br>
                         </div>
                         <div>
                             <i class="fab fa-bluetooth icon" style="color: #8e8e8e;"></i> Bluetooth:
@@ -151,40 +184,22 @@ function autosvendidos() {
                             ${vendido.funciones.airbags ? "Sí" : "No"}<br>
                         </div>
                         <div>
-                            <i class="fas fa-snowplow icon" style="color: #8e8e8e;"></i> Control de tracción:
+                            <i class="fas fa-snowplow icon" style="color: #8e8e8e;"></i> Control de
+                            tracción:
                             ${vendido.funciones ? "Sí" : "No"}<br>
                         </div>
-                        
 
 
-                            </div>
 
+                    </div>
 
-                        </div>
-
-                        </div>
-
-
-                  
 
                 </div>
-                <div class="row mt-4 imgminiaturabloq">
-                    <div class="col-md-4 carminiatura">
-                        <img src="../img/gtr1.jpg" id="miniatura1" alt="Imagen 1" class="img-fluid mqwer"
-                            onclick="changeCarouselImage('gtr1.jpg')">
-                    </div>
-                    <div class="col-md-4 carminiatura">
-                        <img src="../img/gtr2.jpg" id="miniatura2" alt="Imagen 2" class="img-fluid mqwer"
-                            onclick="changeCarouselImage('gtr2.jpg')">
-                    </div>
-                    <div class="col-md-4 carminiatura">
-                        <img src="../img/nisan3.png" id="miniatura3" alt="Imagen 3" class="img-fluid mqwer"
-                            onclick="changeCarouselImage('nisan3.png')">
-                    </div>
-                    <!-- Agrega más columnas según el número de imágenes -->
-                </div>
 
-            </section>
+            </div>
+            
+        </section>
+
 
         `;
 

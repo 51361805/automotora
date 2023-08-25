@@ -783,3 +783,25 @@ color:#9c0000}
 
 
 
+
+
+
+.carousel-inner {
+    transition: none !important;
+}
+
+.sadsa{max-width: 800px;}
+
+.ertr{
+    text-align: center;
+    padding-top: 25px;
+    margin: 0;
+    color: #8c0000;
+    font-size: 20px;
+}
+.trabtn{
+    margin-bottom: 0;
+    margin-right: 20px;
+    
+}
+

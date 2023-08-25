@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const carouselItems = document.querySelectorAll(".carousel-item");
+  const carouselItems = document.querySelectorAll(".trs");
   let currentItemIndex = 0;
 
   function showNextImage() {
@@ -64,7 +64,7 @@ const autos = [
     id: "auto2",
     modelo: "Toyota Corolla 2023",
     precioContado: 21500,
-    estado: true,
+    estado: false,
     img1: "",
     img2: "",
     img3: "",
@@ -138,7 +138,7 @@ const autos = [
     id: "auto8",
     modelo: "BMW X5",
     precioContado: 45000,
-    estado: true,
+    estado: false,
     img1: "",
     img2: "",
     img3: "",
@@ -176,7 +176,7 @@ const autos = [
     id: "auto9",
     modelo: "Audi Q5",
     precioContado: 38000,
-    estado: false,
+    estado: true,
     img1: "",
     img2: "",
     img3: "",
@@ -215,7 +215,18 @@ const autos = [
 
 
 
-//autos activos
+
+
+
+
+
+
+
+
+
+
+
+
 function cargarAutos() {
   const autoscontenedor = document.getElementById('autoscontenedor');
 
@@ -225,59 +236,100 @@ function cargarAutos() {
       contenedor.classList.add('cardd'); // Agregar la clase "cardd" al contenedor
 
       contenedor.innerHTML = `
-    <img class="imgcardd" src="./img/gtr4.jpg" alt="">
-    <h4 class="titleproducto">${auto.modelo}</h4>
-    <p class="precio green-text">USD ${auto.precioContado}</p>
+      <div id="carouselExample${auto.id}" class="carousel slide trgdt">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img class="d-block w-100" src="./img/gtr2.jpg" alt="Imagen 1">
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="./img/gtr3.jpg" alt="Imagen 2">
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="./img/porche.jpeg" alt="Imagen 3">
+          </div>
+          <!-- Agrega más imágenes según las propiedades de img4, img5, etc. -->
+      </div>
+      <button class="carousel-control-prev" type="button"
+          data-bs-target="#carouselExample${auto.id}" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button"
+          data-bs-target="#carouselExample${auto.id}" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  
+      
+      <h4 class="titleproducto">${auto.modelo}</h4>
+      <p class="precio green-text">USD ${auto.precioContado}</p>
 
-    <div class="trn">
-        <div> 
-            <i class="fas fa-road icon"></i> Km: ${auto.kilometros} km<br>
-            <i class="fas fa-map-marker-alt icon"></i> Maldonado<br>
-            <i class="fas fa-car icon"></i> ${auto.puertas} Puertas<br>
-        </div>
+      <div class="trn">
+          <div> 
+              <i class="fas fa-road icon"></i> Km: ${auto.kilometros} km<br>
+              <i class="fas fa-map-marker-alt icon"></i> Maldonado<br>
+              <i class="fas fa-car icon"></i> ${auto.puertas} Puertas<br>
+          </div>
 
-        <div>
-            <i class="fas fa-calendar-alt icon"></i> Año: ${auto.anio}<br>
-            <i class="fas fa-gas-pump icon"></i> Combustible: ${auto.combustible}<br>
-        </div>
+          <div>
+              <i class="fas fa-calendar-alt icon"></i> Año: ${auto.anio}<br>
+              <i class="fas fa-gas-pump icon"></i> Combustible: ${auto.combustible}<br>
+          </div>
+      </div>
 
-    </div>
+      <div class="accordion-item">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapse${auto.id}"
+                  aria-expanded="false" aria-controls="flush-collapse${auto.id}">
+                  <i class="fas fa-info-circle icon vis5" style="color: rgb(42, 42, 214);"></i>
+                  <p> Ver Información</p>
+              </button>
+          </h2>
+          <div id="flush-collapse${auto.id}" class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                  <div class="financiacion marginleft">
+                      <p><i class="fas fa-credit-card"></i> Financiación disponible:</p>
+                      <p>Hasta en ${auto.financiacion} cuotas de <span class="currency">USD</span> ${auto.importeCuota}</p>
+                      <p>¡La primera cuota dentro de los 60 días!</p>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#flush-collapse${auto.id}"
-                aria-expanded="false" aria-controls="flush-collapse${auto.id}">
-                <i class="fas fa-info-circle icon vis5"
-                    style="color: rgb(42, 42, 214);"></i>
-                <p> Ver Información</p>
-            </button>
-        </h2>
-        <div id="flush-collapse${auto.id}" class="accordion-collapse collapse"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-                <div class="financiacion marginleft">
-                    <p><i class="fas fa-credit-card"></i> Financiación disponible:</p>
-                    <p>Hasta en ${auto.financiacion} cuotas de <span class="currency">USD</span> ${auto.importeCuota}</p>
-                    <p>¡La primera cuota dentro de los 60 días!</p>
-                </div>
-            </div>
-        </div>
-       </div>
-       <div class="centbutton">
-        <button id="${auto.id} " class="visualizar">Visualizar</button>
-       </div>
-        `;
+      <div class="centbutton">
+          <button id="${auto.id}" class="visualizar">Visualizar</button>
+      </div>
+      `;
 
+      // ... Tu código para construir el contenido del contenedor
 
-    // Decidir en qué contenedor agregar el contenedor clonado
- 
-    autoscontenedor.appendChild(contenedor);
+      const visualizarButton = contenedor.querySelector('.visualizar');
+      visualizarButton.addEventListener('click', () => {
+        // Al hacer clic en el botón "Visualizar", se guarda la información del vehículo en el Local Storage
+        const vehiculosGuardados = JSON.parse(localStorage.getItem('vehiculosGuardados')) || [];
+        vehiculosGuardados.push(auto);
+        localStorage.setItem('vehiculosGuardados', JSON.stringify(vehiculosGuardados));
+        window.location.href = '/pages/vistos.html'; 
+      });
+
+      autoscontenedor.appendChild(contenedor);
     }
-    
   });
 }
+
+// Llama a la función para cargar los autos automáticamente
 cargarAutos();
+
+
+
+
+
+
+
+
 
 
 
@@ -352,31 +404,54 @@ function filtrarAutos() {
           
       autoElement.classList.add('cardd');
       autoElement.innerHTML = `
-      <img class="imgcardd" src="./img/gtr4.jpg" alt="">
+      <div id="carouselExample${auto.id}" class="carousel slide trgdt">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img class="d-block w-100" src="./img/gtr2.jpg" alt="Imagen 1">
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="./img/gtr3.jpg" alt="Imagen 2">
+          </div>
+          <div class="carousel-item">
+              <img class="d-block w-100" src="./img/porche.jpeg" alt="Imagen 3">
+          </div>
+          <!-- Agrega más imágenes según las propiedades de img4, img5, etc. -->
+      </div>
+      <button class="carousel-control-prev" type="button"
+          data-bs-target="#carouselExample${auto.id}" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button"
+          data-bs-target="#carouselExample${auto.id}" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  
+      
       <h4 class="titleproducto">${auto.modelo}</h4>
       <p class="precio green-text">USD ${auto.precioContado}</p>
-  
+
       <div class="trn">
           <div> 
               <i class="fas fa-road icon"></i> Km: ${auto.kilometros} km<br>
               <i class="fas fa-map-marker-alt icon"></i> Maldonado<br>
               <i class="fas fa-car icon"></i> ${auto.puertas} Puertas<br>
           </div>
-  
+
           <div>
               <i class="fas fa-calendar-alt icon"></i> Año: ${auto.anio}<br>
               <i class="fas fa-gas-pump icon"></i> Combustible: ${auto.combustible}<br>
           </div>
-  
       </div>
-  
+
       <div class="accordion-item">
           <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button"
                   data-bs-toggle="collapse" data-bs-target="#flush-collapse${auto.id}"
                   aria-expanded="false" aria-controls="flush-collapse${auto.id}">
-                  <i class="fas fa-info-circle icon vis5"
-                      style="color: rgb(42, 42, 214);"></i>
+                  <i class="fas fa-info-circle icon vis5" style="color: rgb(42, 42, 214);"></i>
                   <p> Ver Información</p>
               </button>
           </h2>
@@ -390,10 +465,11 @@ function filtrarAutos() {
                   </div>
               </div>
           </div>
-         </div>
-         <div class="centbutton">
-          <button id="${auto.id} " class="visualizar">Visualizar</button>
-         </div>
+      </div>
+
+      <div class="centbutton">
+          <button id="${auto.id}" class="visualizar">Visualizar</button>
+      </div>
       `;
       autosContenedor.appendChild(autoElement);
     }
