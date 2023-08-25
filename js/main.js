@@ -237,15 +237,15 @@ function cargarAutos() {
 
       contenedor.innerHTML = `
       <div id="carouselExample${auto.id}" class="carousel slide trgdt">
-      <div class="carousel-inner">
+      <div class="carousel-inner tretw">
           <div class="carousel-item active">
-              <img class="d-block w-100" src="./img/gtr2.jpg" alt="Imagen 1">
+               <img class="d-block w-100" src="./img/aaa.jpg" alt="Imagen 1">
           </div>
           <div class="carousel-item">
-              <img class="d-block w-100" src="./img/gtr3.jpg" alt="Imagen 2">
+          <img class="d-block w-100" src="./img/re.jpg" alt="Imagen 1">
           </div>
           <div class="carousel-item">
-              <img class="d-block w-100" src="./img/porche.jpeg" alt="Imagen 3">
+          <img class="d-block w-100" src="./img/r2.jpg" alt="Imagen 1">
           </div>
           <!-- Agrega más imágenes según las propiedades de img4, img5, etc. -->
       </div>
@@ -405,18 +405,18 @@ function filtrarAutos() {
       autoElement.classList.add('cardd');
       autoElement.innerHTML = `
       <div id="carouselExample${auto.id}" class="carousel slide trgdt">
-      <div class="carousel-inner">
-          <div class="carousel-item active">
-              <img class="d-block w-100" src="./img/gtr2.jpg" alt="Imagen 1">
-          </div>
-          <div class="carousel-item">
-              <img class="d-block w-100" src="./img/gtr3.jpg" alt="Imagen 2">
-          </div>
-          <div class="carousel-item">
-              <img class="d-block w-100" src="./img/porche.jpeg" alt="Imagen 3">
-          </div>
-          <!-- Agrega más imágenes según las propiedades de img4, img5, etc. -->
+      <div class="carousel-inner tretw">
+      <div class="carousel-item active">
+           <img class="d-block w-100" src="./img/aaa.jpg" alt="Imagen 1">
       </div>
+      <div class="carousel-item">
+      <img class="d-block w-100" src="./img/re.jpg" alt="Imagen 1">
+      </div>
+      <div class="carousel-item">
+      <img class="d-block w-100" src="./img/r2.jpg" alt="Imagen 1">
+      </div>
+      <!-- Agrega más imágenes según las propiedades de img4, img5, etc. -->
+  </div>
       <button class="carousel-control-prev" type="button"
           data-bs-target="#carouselExample${auto.id}" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -471,6 +471,14 @@ function filtrarAutos() {
           <button id="${auto.id}" class="visualizar">Visualizar</button>
       </div>
       `;
+      const visualizarButton = autosContenedor.querySelector('.visualizar');
+      visualizarButton.addEventListener('click', () => {
+        // Al hacer clic en el botón "Visualizar", se guarda la información del vehículo en el Local Storage
+        const vehiculosGuardados = JSON.parse(localStorage.getItem('vehiculosGuardados')) || [];
+        vehiculosGuardados.push(auto);
+        localStorage.setItem('vehiculosGuardados', JSON.stringify(vehiculosGuardados));
+        window.location.href = './pages/vistos.html'; 
+      });
       autosContenedor.appendChild(autoElement);
     }
   });

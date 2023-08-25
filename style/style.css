@@ -405,7 +405,7 @@ label {
     background: linear-gradient(to bottom, #000000, #8c0000);
     color: #fff;
     padding: 40px 0;
- 
+
 }
 
 .footer-logo {
@@ -449,7 +449,7 @@ label {
     border: solid 1px black;
     margin: 10px;
     border-radius: 5px;
-    box-shadow: 0 0  5px  #b4a9a9;
+    box-shadow: 0 0 5px #b4a9a9;
 
 }
 
@@ -474,21 +474,26 @@ label {
     font-size: 12px;
 
     /* Barra de desplazamiento personalizada para navegadores WebKit (Chrome, Safari) */
-   
+
 }
 
 ::-webkit-scrollbar {
-    width: 6px; /* Ancho de la barra de desplazamiento */
+    width: 6px;
+    /* Ancho de la barra de desplazamiento */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #888; /* Color del pulgar de la barra de desplazamiento */
-    border-radius: 3px; /* Borde redondeado del pulgar */
+    background-color: #888;
+    /* Color del pulgar de la barra de desplazamiento */
+    border-radius: 3px;
+    /* Borde redondeado del pulgar */
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Color de fondo de la pista de la barra de desplazamiento */
+    background-color: #f1f1f1;
+    /* Color de fondo de la pista de la barra de desplazamiento */
 }
+
 /* Barra de desplazamiento personalizada para navegadores Firefox */
 .columainfop::-moz-scrollbar {
     width: 6px;
@@ -502,15 +507,18 @@ label {
 .columainfop::-moz-scrollbar-track {
     background-color: #f1f1f1;
 }
-.picgrande{
+
+.picgrande {
     max-width: 600px;
 }
-.bloquevendido{
- 
-    box-shadow: 0 0  5px  #b4a9a9;
+
+.bloquevendido {
+
+    box-shadow: 0 0 5px #b4a9a9;
     margin-bottom: 30px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 10px;
 
 }
 
@@ -530,37 +538,44 @@ label {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #8c0000; /* Color de la línea */
-    bottom: -8px; /* Ajusta la posición de la línea */
+    background-color: #8c0000;
+    /* Color de la línea */
+    bottom: -8px;
+    /* Ajusta la posición de la línea */
     left: 0;
-    transform: scaleX(0); /* Comienza con la línea oculta */
+    transform: scaleX(0);
+    /* Comienza con la línea oculta */
     transform-origin: center;
     transition: transform 0.5s ease-in-out;
 }
 
 .titulo-seccion:hover::after {
-    transform: scaleX(1); /* Muestra la línea al hacer hover */
+    transform: scaleX(1);
+    /* Muestra la línea al hacer hover */
 }
 
-.topnax{
+.topnax {
     margin-top: 20px;
 }
 
-.columainfop ,.div{
+.columainfop,
+.div {
     padding: 5px;
 }
 
 
 .contact-form {
     max-width: 400px;
-    margin: 0 ;
+    margin: 0;
     margin-right: 20px;
 }
-.infocar{
+
+.infocar {
     margin-left: 20px;
     background-color: #f1f1f1;
 }
-.contactarbtn{
+
+.contactarbtn {
     width: 100%;
     background: linear-gradient(to bottom, #000000, #8c0000);
 }
@@ -574,35 +589,42 @@ label {
     background-color: #ffffff;
     transition: background-color 0.3s ease-in-out;
 }
-.contactarbtn:hover{
+
+.contactarbtn:hover {
     background: linear-gradient(to bottom, #8c0000, #000000);
 }
+
 .mb-3 {
     margin-bottom: 0 !important;
 }
-.picgrande{
+
+.picgrande {
     margin: 5px;
     border-radius: 2px;
     object-fit: cover;
 }
-.carminiatura{
- height: 70px;
-width: 150px;
-padding: 0;
-border-radius: 2px;
+
+.carminiatura {
+    height: 70px;
+    width: 150px;
+    padding: 0;
+    border-radius: 2px;
 }
-.mqwer{
-    width: 100%;margin: 0;
+
+.mqwer {
+    width: 100%;
+    margin: 0;
     padding: 0;
     height: 100%;
 
 }
-.imggrande{
+
+.imggrande {
     flex-wrap: wrap;
     padding-top: 30px;
 }
 
-.icon{
+.icon {
     color: #5b5858;
 }
 
@@ -610,7 +632,7 @@ border-radius: 2px;
 
 
 @media screen and (max-width: 1050px) {
-    aside{
+    aside {
         display: none;
     }
 }
@@ -618,7 +640,7 @@ border-radius: 2px;
 
 @media screen and (max-width: 970px) {
     .carruselflex {
-       display: block;
+        display: block;
     }
 }
 
@@ -631,9 +653,14 @@ border-radius: 2px;
     }
 }
 
+.imggrande {
+    flex-wrap: nowrap;
+}
+
+
 
 @media screen and (max-width: 480px) {
-    .brand-links{
+    .brand-links {
         max-width: 100%;
         overflow-x: scroll;
         display: flex;
@@ -646,7 +673,8 @@ border-radius: 2px;
         /* Oculta la barra de desplazamiento en navegadores basados en WebKit (Chrome, Safari) */
         display: none;
     }
-    .productos{
+
+    .productos {
         display: block;
     }
 
@@ -655,20 +683,20 @@ border-radius: 2px;
     }
 
     .picgrande {
-       
+
         width: 353px;
-       
+
     }
 
 
 
 
     .infocar {
-       margin-left: 0;
-       background-color: transparent;
+        margin-left: 0;
+        background-color: transparent;
     }
 
-    .columainfop{
+    .columainfop {
         height: 100px;
     }
 
@@ -682,7 +710,7 @@ border-radius: 2px;
         margin: 5px;
         margin-right: 5px;
     }
-    
+
     .imgminiaturabloq::-webkit-scrollbar {
         /* Oculta la barra de desplazamiento en navegadores basados en WebKit (Chrome, Safari) */
         display: none;
@@ -693,19 +721,20 @@ border-radius: 2px;
     }
 
     .columainfop {
-   
+
         font-size: 15px;
     }
 
-    .trabtn{
+    .trabtn {
         background-color: transparent !important;
         border: none;
         margin-top: 30px;
     }
-    
-    .title-container{
+
+    .title-container {
         text-align: center;
     }
+
     .contador-item {
         padding: 0;
         margin: 5px;
@@ -713,6 +742,13 @@ border-radius: 2px;
 
 }
 
+@media screen and (max-width: 800px) {
+    .imggrande {
+
+        flex-wrap: wrap;
+
+    }
+}
 
 .navbar-nav .nav-link {
     position: relative;
@@ -720,23 +756,26 @@ border-radius: 2px;
     transition: color 0.3s ease-in-out;
 }
 
-.contacbtnven{
-max-width: 400px !important;
-background-color: #f1f1f1 !important;
+.contacbtnven {
+    max-width: 400px !important;
+    background-color: #f1f1f1 !important;
 
 
 }
 
 
-.btnain{
-    display: flex;align-items: baseline;
+.btnain {
+    display: flex;
+    align-items: baseline;width: 300px;
 }
 
-.vendidop{font-size: 20px;
- 
+.vendidop {
+    font-size: 20px;
+
     margin: 0;
     padding: 0;
-color:#9c0000}
+    color: #9c0000
+}
 
 
 .contador-item {
@@ -744,13 +783,15 @@ color:#9c0000}
     flex-direction: column;
     align-items: center;
 }
-  
 
-.cterg{
+
+.cterg {
     display: flex;
     justify-content: center;
 }
-#contador ,#otro-contador {
+
+#contador,
+#otro-contador {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -790,18 +831,41 @@ color:#9c0000}
     transition: none !important;
 }
 
-.sadsa{max-width: 800px;}
+.sadsa {
+    max-width: 800px;
+}
 
-.ertr{
+.ertr {
     text-align: center;
     padding-top: 25px;
     margin: 0;
     color: #8c0000;
     font-size: 20px;
 }
-.trabtn{
+
+.trabtn {
     margin-bottom: 0;
     margin-right: 20px;
-    
+
 }
 
+.tretw {
+    height: 280px;
+}
+
+.tretw img {
+    height: 280px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 1000px) {
+    .sssd {
+        height: auto;
+        width: 500px;
+    }
+
+    .sssd img {
+        height: 280px;
+        object-fit: cover;
+    }
+}

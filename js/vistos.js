@@ -69,18 +69,18 @@ function cargarVehiculoSeleccionado() {
 
 
     <div id="carouselExample${vehiculoSeleccionado.id}" class="carousel slide sadsa">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="../img/gtr1.jpg" alt="Imagen 1">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="../img/gtr3.jpg" alt="Imagen 2">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="../img/porche.jpeg" alt="Imagen 3">
-            </div>
-            <!-- Agrega más imágenes según las propiedades de img4, img5, etc. -->
-        </div>
+    <div class="carousel-inner sssd">
+    <div class="carousel-item active">
+         <img class="d-block w-100" src="../img/aaa.jpg" alt="Imagen 1">
+    </div>
+    <div class="carousel-item">
+    <img class="d-block w-100" src="../img/re.jpg" alt="Imagen 1">
+    </div>
+    <div class="carousel-item">
+    <img class="d-block w-100" src="../img/r2.jpg" alt="Imagen 1">
+    </div>
+    <!-- Agrega más imágenes según las propiedades de img4, img5, etc. -->
+</div>
         <button class="carousel-control-prev" type="button"
             data-bs-target="#carouselExample${vehiculoSeleccionado.id}" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
